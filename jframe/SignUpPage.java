@@ -72,7 +72,7 @@ public class SignUpPage extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-             con =DriverManager.getConnection("jdbc:mysql:///library","root","12345");  
+            con = DriverManager.getConnection("jdbc:mysql://localhost/library_management_system", "root", "");
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(SignUpPage.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -157,8 +157,7 @@ public class SignUpPage extends javax.swing.JFrame {
             String name = txt_username.getText();
 
             Class.forName("com.mysql.cj.jdbc.Driver");
-             con =DriverManager.getConnection("jdbc:mysql:///library","root","12345");  
-            
+            con = DriverManager.getConnection("jdbc:mysql://localhost/library_management_system", "root", "");
             pst = con.prepareStatement("select * from users where username=?");
             pst.setString(1, name);
             rs = pst.executeQuery();
@@ -265,7 +264,7 @@ public class SignUpPage extends javax.swing.JFrame {
         jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel27.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel27.setText("Group_5");
+        jLabel27.setText("Naveenkumar J");
         jLabel27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -529,7 +528,7 @@ public class SignUpPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
-            Desktop.getDesktop().browse(new URI(""));
+            Desktop.getDesktop().browse(new URI("https://github.com/naveenkumar-j"));
         } catch (IOException ex) {
             Logger.getLogger(SignUpPage.class.getName()).log(Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
@@ -542,7 +541,7 @@ public class SignUpPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
-            Desktop.getDesktop().browse(new URI(""));
+            Desktop.getDesktop().browse(new URI("https://www.instagram.com/eagle_programming/?hl=en"));
         } catch (IOException ex) {
             Logger.getLogger(SignUpPage.class.getName()).log(Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {

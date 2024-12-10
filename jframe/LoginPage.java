@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package jframe;
 
 import java.awt.Desktop;
@@ -14,10 +18,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-
+/**
+ *
+ * @author Name
+ */
 public class LoginPage extends javax.swing.JFrame {
 
-    
+    /**
+     * Creates new form SignUpPage
+     */
+    // Default constructor
     public LoginPage() {
         initComponents();
         Connect();
@@ -41,7 +51,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-             con =DriverManager.getConnection("jdbc:mysql:///library","root","12345");  
+            con = DriverManager.getConnection("jdbc:mysql://localhost/library_management_system", "root", "");
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -73,7 +83,7 @@ public class LoginPage extends javax.swing.JFrame {
         String utype = txt_usertype.getSelectedItem().toString();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-             con =DriverManager.getConnection("jdbc:mysql:///library","root","12345");  
+            con = DriverManager.getConnection("jdbc:mysql://localhost/library_management_system", "root", "");
             pst = con.prepareStatement("select * from users where username=? and password=? and usertype=?");
             pst.setString(1, name);
             pst.setString(2, pwd);
@@ -169,7 +179,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel18.setText("BUBT_");
+        jLabel18.setText("EAGLE");
         jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -179,7 +189,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel27.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel27.setText("Group_5");
+        jLabel27.setText("Naveenkumar J");
         jLabel27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -195,7 +205,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel28.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel28.setText("Programmers");
+        jLabel28.setText("PROGRAMMER");
         jLabel28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -381,7 +391,7 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
-            Desktop.getDesktop().browse(new URI(""));
+            Desktop.getDesktop().browse(new URI("https://github.com/naveenkumar-j"));
         } catch (IOException ex) {
             Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
@@ -389,11 +399,12 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel27MouseClicked
 
+    // Instagram details
     private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
-            Desktop.getDesktop().browse(new URI("https://www.bubt.edu.bd/"));
+            Desktop.getDesktop().browse(new URI("https://www.instagram.com/eagle_programming/?hl=en"));
         } catch (IOException ex) {
             Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
@@ -401,11 +412,12 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel28MouseClicked
 
+    // Instagram details
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
-            Desktop.getDesktop().browse(new URI("https://www.bubt.edu.bd/"));
+            Desktop.getDesktop().browse(new URI("https://www.instagram.com/eagle_programming/?hl=en"));
         } catch (IOException ex) {
             Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
